@@ -204,7 +204,7 @@ const Onnx = () => {
       >
         Select image
       </button>
-      <img alt="onnx" src={image} style={{ maxWidth: "50vw", maxHeight: "50vh" }}></img>
+      {image && <img alt="onnx" src={image} style={{ maxWidth: "50vw", maxHeight: "50vh" }}></img>}
       {image && model && iTensor && (
         <button
           onClick={() => runInference(iTensor)}
