@@ -1,7 +1,7 @@
 # Host link:
 https://js-computer-vision-inference.vercel.app/
 # Compatibilty:
-With few changes this model can run on node.js server or react native mobile application.
+With few changes this code can run on node.js server or react native mobile application.
 
 # 1- Convert model to onnx:
 https://www.youtube.com/watch?v=lRBsmnBE9ZA
