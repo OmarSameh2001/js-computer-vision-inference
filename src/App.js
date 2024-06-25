@@ -1,11 +1,11 @@
 
 import './App.css';
-import ObjectDetection from './components/ObjectDetection';
+import Onnx from './components/Onnx';
 
 function App() {
   return (
     <div className="App">
-      <ObjectDetection/>
+      <Onnx/>
     </div>
   );
 }

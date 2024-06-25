@@ -1,10 +1,7 @@
 import React, { useState, useRef } from "react";
 import * as ort from "onnxruntime-web";
 import { Tensor } from "onnxruntime-web";
-import axios from "axios";
-import * as Jimp from "jimp";
-
-const ObjectDetection = () => {
+const Onnx = () => {
   const [model, setModel] = useState(null);
   const [predictions, setPredictions] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -136,11 +133,6 @@ const ObjectDetection = () => {
     }
   };
 
-  const postprocessOutput = (output) => {
-    // Convert model output to predictions
-    return [{ label: "Object", confidence: 0.9, bbox: [0, 0, 100, 100] }];
-  };
-
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
@@ -212,7 +204,7 @@ const ObjectDetection = () => {
       >
         Select image
       </button>
-      <img src={image} style={{ maxWidth: "50vw", maxHeight: "50vh" }}></img>
+      <img alt="onnx" src={image} style={{ maxWidth: "50vw", maxHeight: "50vh" }}></img>
       {image && model && iTensor && (
         <button
           onClick={() => runInference(iTensor)}
@@ -268,4 +260,4 @@ const ObjectDetection = () => {
   );
 };
 
-export default ObjectDetection;
+export default Onnx;
